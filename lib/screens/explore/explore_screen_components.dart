@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pyramid_developer/theme/app_color.dart';
 
 class BestForYou extends StatelessWidget {
   const BestForYou({super.key});
@@ -21,14 +22,13 @@ class BestForYou extends StatelessWidget {
         ),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-          child: Container(
+          child: SizedBox(
             height: 200,
             width: MediaQuery.of(context).size.width,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: bestForYouList.length,
               itemBuilder: (BuildContext context, int index) {
-                print(bestForYouList.length);
                 return bestForYouList[index];
               },
             ),
@@ -66,7 +66,7 @@ class BestForYouCard extends StatelessWidget {
         Container(
           width: 200,
           height: 86,
-          margin: EdgeInsets.only(bottom: 10, right: 10),
+          margin: const EdgeInsets.only(bottom: 10, right: 10),
           padding: const EdgeInsets.all(5),
           decoration: BoxDecoration(
             color: Colors.white,
@@ -91,7 +91,7 @@ class BestForYouCard extends StatelessWidget {
                   SizedBox(
                     width: 100,
                     child: Text(name,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w500,
                         )),
@@ -102,15 +102,15 @@ class BestForYouCard extends StatelessWidget {
                   Container(
                     height: 18,
                     padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Text(
-                      duration,
-                      style: TextStyle(
-                          fontSize: 12,
-                          color: Color.fromARGB(255, 117, 117, 117)),
-                    ),
                     decoration: BoxDecoration(
                       color: Colors.grey[200],
                       borderRadius: BorderRadius.circular(2),
+                    ),
+                    child: Text(
+                      duration,
+                      style: const TextStyle(
+                          fontSize: 12,
+                          color: Color.fromARGB(255, 117, 117, 117)),
                     ),
                   ),
                   const SizedBox(
@@ -119,15 +119,15 @@ class BestForYouCard extends StatelessWidget {
                   Container(
                     height: 18,
                     padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Text(
-                      level,
-                      style: TextStyle(
-                          fontSize: 12,
-                          color: Color.fromARGB(255, 117, 117, 117)),
-                    ),
                     decoration: BoxDecoration(
                       color: Colors.grey[200],
                       borderRadius: BorderRadius.circular(2),
+                    ),
+                    child: Text(
+                      level,
+                      style: const TextStyle(
+                          fontSize: 12,
+                          color: Color.fromARGB(255, 117, 117, 117)),
                     ),
                   ),
                 ],
@@ -139,7 +139,7 @@ class BestForYouCard extends StatelessWidget {
         Container(
           width: 200,
           height: 86,
-          margin: EdgeInsets.only(bottom: 10, right: 10),
+          margin: const EdgeInsets.only(bottom: 10, right: 10),
           padding: const EdgeInsets.all(5),
           decoration: BoxDecoration(
             color: Colors.white,
@@ -163,7 +163,7 @@ class BestForYouCard extends StatelessWidget {
                   SizedBox(
                     width: 100,
                     child: Text(name_1,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w500,
                         )),
@@ -174,15 +174,15 @@ class BestForYouCard extends StatelessWidget {
                   Container(
                     height: 18,
                     padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Text(
-                      duration_1,
-                      style: TextStyle(
-                          fontSize: 12,
-                          color: Color.fromARGB(255, 117, 117, 117)),
-                    ),
                     decoration: BoxDecoration(
                       color: Colors.grey[200],
                       borderRadius: BorderRadius.circular(2),
+                    ),
+                    child: Text(
+                      duration_1,
+                      style: const TextStyle(
+                          fontSize: 12,
+                          color: Color.fromARGB(255, 117, 117, 117)),
                     ),
                   ),
                   const SizedBox(
@@ -191,15 +191,15 @@ class BestForYouCard extends StatelessWidget {
                   Container(
                     height: 18,
                     padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Text(
-                      level_1,
-                      style: TextStyle(
-                          fontSize: 12,
-                          color: Color.fromARGB(255, 117, 117, 117)),
-                    ),
                     decoration: BoxDecoration(
                       color: Colors.grey[200],
                       borderRadius: BorderRadius.circular(2),
+                    ),
+                    child: Text(
+                      level_1,
+                      style: const TextStyle(
+                          fontSize: 12,
+                          color: Color.fromARGB(255, 117, 117, 117)),
                     ),
                   ),
                 ],
@@ -214,7 +214,7 @@ class BestForYouCard extends StatelessWidget {
 }
 
 List<BestForYouCard> bestForYouList = [
-  BestForYouCard(
+  const BestForYouCard(
       name: "belly fat burner",
       imagePath: 'ex_1',
       duration: '10 min',
@@ -223,7 +223,7 @@ List<BestForYouCard> bestForYouList = [
       duration_1: '5 min',
       name_1: "Plank",
       level_1: 'Expert'),
-  BestForYouCard(
+  const BestForYouCard(
       name: "belly fat burner",
       imagePath: 'ex_1',
       duration: '10 min',
@@ -232,7 +232,7 @@ List<BestForYouCard> bestForYouList = [
       duration_1: '5 min',
       name_1: "Plank",
       level_1: 'Expert'),
-  BestForYouCard(
+  const BestForYouCard(
       name: "belly fat burner",
       imagePath: 'ex_1',
       duration: '10 min',
@@ -241,4 +241,69 @@ List<BestForYouCard> bestForYouList = [
       duration_1: '5 min',
       name_1: "Plank",
       level_1: 'Expert'),
+];
+
+class Challenge extends StatelessWidget {
+  const Challenge({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: SizedBox(
+          height: 102,
+          width: MediaQuery.of(context).size.width,
+          child: ListView.builder(
+            shrinkWrap: true,
+            scrollDirection: Axis.horizontal,
+            itemCount: challengeList.length,
+            itemBuilder: (BuildContext context, int index) {
+              return challengeList[index];
+            },
+          ),
+        ));
+  }
+}
+
+class ChallengeCard extends StatelessWidget {
+  final String name;
+  final String imagePath;
+  const ChallengeCard({super.key, required this.name, required this.imagePath});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 11,
+      height: 102,
+      margin: const EdgeInsets.only(bottom: 10, right: 10),
+      decoration: BoxDecoration(
+        color: AppColorScheme().tabBackground,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Stack(
+        children: [
+          Positioned(
+              bottom: 5,
+              right: 0,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: SizedBox(
+                    width: 74,
+                    height: 66,
+                    child: Image(image: AssetImage('assets/$imagePath.png'))),
+              )),
+          Positioned(
+              bottom: 5,
+              left: 5,
+              child: SizedBox(width: 70, child: Text(name))),
+        ],
+      ),
+    );
+  }
+}
+
+List<ChallengeCard> challengeList = [
+  const ChallengeCard(name: "Plank \nChallenge", imagePath: 'fire'),
+  const ChallengeCard(name: "Squat \nChallenge", imagePath: 'fire'),
+  const ChallengeCard(name: "Push-up \nChallenge", imagePath: 'fire'),
 ];

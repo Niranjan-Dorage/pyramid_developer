@@ -7,7 +7,7 @@ class ExploreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF7F6FA),
+      backgroundColor: const Color(0xFFF7F6FA),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
@@ -70,7 +70,13 @@ class ExploreScreen extends StatelessWidget {
                 ),
               ],
             ),
-            BestForYou(),
+            const BestForYou(),
+            const Text('Challenge',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                )),
+            const Challenge()
           ],
         ),
       ),
