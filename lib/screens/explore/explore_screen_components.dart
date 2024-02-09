@@ -273,7 +273,7 @@ class ChallengeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 11,
+      width: 115,
       height: 102,
       margin: const EdgeInsets.only(bottom: 10, right: 10),
       decoration: BoxDecoration(
