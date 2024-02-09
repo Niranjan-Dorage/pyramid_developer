@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:pyramid_developer/screens/explore/explore_screen.dart';
 import 'package:pyramid_developer/theme/app_color.dart';
 
 void main() async {
@@ -94,7 +95,7 @@ class _BottomNavigationBarExampleState
 
   static const List<Widget> _widgetOptions = <Widget>[
     Text('Home'),
-    Text('Explore'),
+    ExploreScreen(),
     Text('Stats'),
     Text('Profile'),
   ];
